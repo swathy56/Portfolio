@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #003366, #660066);
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #003366, #660066);
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+header h1.glow-text {
+    font-size: 3rem;
+    color: #2980b9; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+header p.role-description {
+    font-size: 1.2rem;
+    animation: slideIn 2s ease-out;
+    color: #f1f1f1;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, #003366, #660066);
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav ul li:hover {
+    background: linear-gradient(to right, #003366, #660066);
+}
+
+/* Home Button Styling */
+.home-btn {
+    position: absolute;
+    top: 20px; /* Adjust this value based on the header height */
+    right: 20px; /* Positions the button in the top-right corner */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(to right, #003366, #660066);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.home-btn:hover {
+    background: linear-gradient(to right, #003366, #660066);
+}
+
+/* Media Section */
+#media {
+    margin-top: 40px;
+}
+
+#media h2.glow-text {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #3498db; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 350px; /* Reduced width for images */
+    height: 200px; /* Reduced height */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Blue glow for images */
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 80%; /* Ensure the video fits within the container */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Blue glow for video */
+}
+
+/* Features Section */
+#features {
+    margin-top: 40px;
+}
+
+#features h2.glow-text {
+    font-size: 2.5rem;
+    color: #3498db; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#features ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db;
+    }
+    50% {
+        text-shadow: 0 0 20px #2980b9, 0 0 40px #3498db, 0 0 50px #3498db;
+    }
+    100% {
+        text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

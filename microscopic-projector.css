@@ -1,0 +1,187 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #003366, #660066);
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #003366, #660066);
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+header h1.glow-text {
+    font-size: 3rem;
+    color: #3498db; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+header p.role-description {
+    font-size: 1.2rem;
+    animation: slideIn 2s ease-out;
+    color: #f1f1f1;
+}
+
+/* Navigation Styles */
+nav {
+    position: fixed; /* Fix position at the top */
+    top: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    background: linear-gradient(to right, #003366, #660066)(51, 51, 51, 0.8); /* Semi-transparent background */
+    border-radius: 0 0 0 10px; /* Rounded bottom-left corner */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li:hover {
+     background: linear-gradient(to right, #003366, #660066);
+    color: linear-gradient(to right, #003366, #660066);
+}
+
+/* Main Content Section */
+main {
+    padding: 20px;
+    margin-top: 100px; /* To avoid overlap with fixed nav */
+}
+
+/* About Section */
+#smart-street-light-intro h2.glow-text {
+    font-size: 2.5rem;
+    color: #8fc1e3; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+#smart-street-light-intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Media Section */
+#media {
+    margin-top: 40px;
+}
+
+#media h2.glow-text {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #3498db; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between items */
+    margin-top: 20px;
+    justify-items: center; /* Center align items horizontally */
+    align-items: start; /* Align items to the top */
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 500px; /* Maintain consistent image size */
+    height: 350;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Blue glow for images */
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.video-container {
+    width: 100%;
+    max-width: 500px; /* Maintain consistent video size with images */
+    height: 350;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Blue glow for video */
+}
+
+/* Features Section */
+#features {
+    margin-top: 40px;
+}
+
+#features h2.glow-text {
+    font-size: 2.5rem;
+    color: #3498db; /* Blue shade */
+    text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db; /* Blue glow effect */
+    animation: glowAnimation 1.5s infinite alternate;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#features ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glowAnimation {
+    0% {
+        text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db;
+    }
+    50% {
+        text-shadow: 0 0 20px #2980b9, 0 0 40px #3498db, 0 0 50px #3498db;
+    }
+    100% {
+        text-shadow: 0 0 10px #2980b9, 0 0 20px #3498db, 0 0 30px #3498db;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="trail.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="content">
+            <h1 class="glow-text typing-effect">Hii, I am Swathy</h1>
+            <p>Mechatronics Engineer | Developer | Business Executive</p>
+        </div>
+        <div class="image-wrapper">
+            <img src="C:\Users\admin\Pictures\Desktop\swathy_portfolio\WhatsApp Image 2024-10-15 at 19.02.43_f97ebc0e.jpg"alt="Hexagonal Image">
+        </div>
+    </header>
+</body>
+</html>
+
+    <nav>
+        <ul>
+            <li onclick="showSection('about')">About Me</li>
+            <li onclick="showSection('skills')">Skills</li>
+            <li onclick="showSection('projects')">Projects</li>
+            <li onclick="showSection('contact')">Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about" class="hidden fade-in">
+            <h2 class="glow-text">About Me</h2>
+            <p>I am a passionate Mechatronics Engineer with expertise in development and management roles, specializing in innovative solutions and cutting-edge technologies.</p>
+        </section>
+        <section id="skills" class="hidden fade-in">
+            <h2 class="glow-text">Skills</h2>
+            <div class="skills-container">
+                <div class="skill">Python</div>
+                <div class="skill">C++</div>
+                <div class="skill">Java</div>
+                <div class="skill">Tinker CAD</div>
+                <div class="skill">Arduino IDE</div>
+                <div class="skill">Blender</div>
+                <div class="skill">Unity</div>
+                <div class="skill">Canva</div>
+                <div class="skill">Figma</div>
+            </div>
+        </section>
+        <section id="projects" class="hidden fade-in">
+            <h2 class="glow-text">My Projects</h2>
+            <div class="projects-container">
+                <div class="project" onclick="navigateTo('petverse.html')">Petverse</div>
+                <div class="project" onclick="navigateTo('microscopic-projector.html')">Microscopic Projector</div>
+                <div class="project" onclick="navigateTo('drip-vigil.html')">Drip Vigil</div>
+                <div class="project" onclick="navigateTo('smart_street_light_monitoring.html')">Smart Street Light Monitoring System</div>
+            </div>
+        </section>
+        <section id="contact" class="hidden fade-in">
+            <h2 class="glow-text">Contact Me</h2>
+            <div class="contact-container">
+                
+                <p>Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=swathychandrasekar729@gmail.com" target="_blank">swathychandrasekar729@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/swathy-chandrasekar-879527248/?originalSubdomain=in" target="_blank">https://www.linkedin.com/in/swathy-chandrasekar-879527248/?originalSubdomain=in</a></p>
+            <p>GitHub: <a href="https://github.com/swathy56" target="_blank">https://github.com/swathy56</a></p>
+            <p>Phone: <a href="tel:+91 9361144379">+191 9361144379</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.add("hidden");
+            });
+            document.getElementById(sectionId).classList.remove("hidden");
+        }
+
+        function navigateTo(project) {
+            window.location.href = project;
+        }
+    </script>
+</body>
+</html>
